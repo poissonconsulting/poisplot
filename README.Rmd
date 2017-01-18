@@ -12,4 +12,6 @@ knitr::opts_chunk$set(
 )
 ```
 
+[![Travis-CI Build Status](https://travis-ci.org/poissonconsulting/poisplot.svg?branch=master)](https://travis-ci.org/poissonconsulting/poisplot)
+
 # poisplot
