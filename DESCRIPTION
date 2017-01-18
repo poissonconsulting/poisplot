@@ -6,6 +6,7 @@ Description: Graphics functions.
 Depends:
     R (>= 3.3.1)
 Imports:
+    datacheckr,
     ggplot2,
     grid
 License: MIT + file LICENSE
