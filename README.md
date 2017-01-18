@@ -1,2 +1,4 @@
-# poisplot
-An R package of Poisson Consulting's plotting functions
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+poisplot
+========
