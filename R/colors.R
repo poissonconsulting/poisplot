@@ -24,5 +24,6 @@ set_colors <- function(values = get_colors()) {
 #' @return color palette as character vector
 #' @export
 get_colors <- function() {
-  getOption("poiscon.colors", c("black", "red", "blue", "green4", "orange3", "slategray"))
+  getOption("poiscon.colors", c("black", "red", "blue", "green4", "orange3",
+                                "slategray", "purple"))
 }
