@@ -17,4 +17,3 @@ A ggplot2 theme.
 \description{
 A ggplot2 theme for Golder plots
 }
-

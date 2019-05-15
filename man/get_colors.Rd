@@ -12,4 +12,3 @@ color palette as character vector
 \description{
 Gets color palette for poiscon
 }
-

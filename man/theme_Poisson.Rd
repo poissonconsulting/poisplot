@@ -21,4 +21,3 @@ A gg theme for Poisson style plots.
 To use, ensure ggplot2 is installed and then call
 \code{theme_set(theme_Poisson())}.
 }
-

@@ -3,3 +3,10 @@
 ^README\.Rmd$
 ^README-.*\.png$
 ^\.travis\.yml$
+^appveyor\.yml$
+^LICENSE\.md$
+^codecov\.yml$
+^build\.R$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

@@ -1,3 +1,3 @@
-#' @import datacheckr ggplot2
+#' @import checkr ggplot2
 #' @importFrom grid unit
 NULL

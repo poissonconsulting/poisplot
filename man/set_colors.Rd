@@ -15,4 +15,3 @@ invisible character vector of colors
 \description{
 Sets color palette for poiscon
 }
-

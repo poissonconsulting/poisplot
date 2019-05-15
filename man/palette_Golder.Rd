@@ -12,4 +12,3 @@ A vector of colors.
 \description{
 A color palette for Golder plots
 }
-
