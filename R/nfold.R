@@ -22,6 +22,15 @@ nfold2prop <- function(x) {
   ifelse(x >= 0, x, -(x-1)^-1-1)
 }
 
+#' N-fold Breaks
+#'
+#' @param n A numeric scalar of the desired number of breaks.
+#'
+#' @return A function to calculate the breaks from a vector.
+#' @export
+#'
+#' @examples
+#' nfold_breaks()(c(-3/4,-2/3,-1/2,0,1,2,3))
 nfold_breaks <- function(n = 5) {
   force(n)
   function(x) {

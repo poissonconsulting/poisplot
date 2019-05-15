@@ -2,6 +2,7 @@
 
 export(get_colors)
 export(nfold2prop)
+export(nfold_breaks)
 export(nfold_trans)
 export(prop2nfold)
 export(scale_x_nfold)

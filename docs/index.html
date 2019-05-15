@@ -85,14 +85,14 @@
 <a class="sourceLine" id="cb1-11" title="11"><span class="st">  </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/geom_point">geom_point</a></span>()</a>
 <a class="sourceLine" id="cb1-12" title="12"></a>
 <a class="sourceLine" id="cb1-13" title="13">gp <span class="op">+</span><span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/scale_continuous">scale_y_continuous</a></span>(<span class="dt">labels =</span> percent)</a></code></pre></div>
-<p><img src="README-unnamed-chunk-2-1.png" width="700"></p>
+<p><img src="reference/figures/README-unnamed-chunk-2-1.png" width="100%"></p>
 <p>The <code><a href="reference/nfold_trans.html">nfold_trans()</a></code> function ensures that negative percent changes scale in the same way as positive percent changes.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">gp <span class="op">+</span><span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/scale_continuous">scale_y_continuous</a></span>(<span class="dt">labels =</span> percent, <span class="dt">trans =</span> <span class="kw"><a href="reference/nfold_trans.html">nfold_trans</a></span>(), <span class="dt">breaks =</span> data<span class="op">$</span>y)</a></code></pre></div>
-<p><img src="README-unnamed-chunk-3-1.png" width="700"></p>
+<p><img src="reference/figures/README-unnamed-chunk-3-1.png" width="100%"></p>
 <p>The poisplot also makes the Poisson plot theme available.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">gp <span class="op">+</span><span class="st"> </span><span class="kw"><a href="reference/scale_x_nfold.html">scale_y_nfold</a></span>(<span class="dt">labels =</span> percent) <span class="op">+</span></a>
 <a class="sourceLine" id="cb3-2" title="2"><span class="st">  </span><span class="kw"><a href="reference/theme_Poisson.html">theme_Poisson</a></span>()</a></code></pre></div>
-<p><img src="README-unnamed-chunk-4-1.png" width="700"></p>
+<p><img src="reference/figures/README-unnamed-chunk-4-1.png" width="100%"></p>
 </div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">

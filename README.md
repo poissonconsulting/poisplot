@@ -43,7 +43,7 @@ gp <- ggplot(data, aes(x = x, y = y)) +
 gp + scale_y_continuous(labels = percent)
 ```
 
-![](README-unnamed-chunk-2-1.png)<!-- -->
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
 The `nfold_trans()` function ensures that negative percent changes scale
 in the same way as positive percent
@@ -53,7 +53,7 @@ changes.
 gp + scale_y_continuous(labels = percent, trans = nfold_trans(), breaks = data$y)
 ```
 
-![](README-unnamed-chunk-3-1.png)<!-- -->
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
 The poisplot also makes the Poisson plot theme available.
 
@@ -62,7 +62,7 @@ gp + scale_y_nfold(labels = percent) +
   theme_Poisson()
 ```
 
-![](README-unnamed-chunk-4-1.png)<!-- -->
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
 
 ## Installation
 
