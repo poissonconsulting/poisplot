@@ -8,6 +8,7 @@ Depends:
 Imports:
     checkr,
     ggplot2,
+    scales,
     grid
 License: MIT + file LICENSE
 Encoding: UTF-8
