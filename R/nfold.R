@@ -22,13 +22,21 @@ nfold2prop <- function(x) {
   ifelse(x >= 0, x, -(x-1)^-1-1)
 }
 
+nfold_breaks <- function(n = 5) {
+  force(n)
+  function(x) {
+    x <- prop2nfold(x)
+    nfold2prop(extended_breaks(n = n)(x))
+  }
+}
+
 #' Nfold Change Transformation
 #'
 #' @export
 nfold_trans <- function() {
-    trans <- function(x) prop2nfold(x)
-    inv <- function(x) nfold2prop(x)
-    trans_new("nfold", trans, inv, domain = c(-1, Inf))
+  trans <- function(x) prop2nfold(x)
+  inv <- function(x) nfold2prop(x)
+  trans_new("nfold", trans, inv, breaks = nfold_breaks(), domain = c(-1, Inf))
 }
 
 #' N-fold Position Scales
