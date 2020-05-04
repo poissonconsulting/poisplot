@@ -10,7 +10,7 @@ scale_x_nfold(...)
 scale_y_nfold(...)
 }
 \arguments{
-\item{...}{Other arguments passed on to \code{scale_(x|y)_continuous()}}
+\item{...}{Other arguments passed on to \verb{scale_(x|y)_continuous()}}
 }
 \description{
 scale_x_nfold() and scale_y_nfold() are variants of \code{\link{scale_x_continuous}()}
