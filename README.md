@@ -1,6 +1,5 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
 <!-- badges: start -->
 
 [![R build
@@ -28,7 +27,6 @@ plot.
 ``` r
 library(poisplot)
 library(ggplot2)
-#> Warning: package 'ggplot2' was built under R version 3.6.3
 library(scales)
 
 data <- data.frame(y = c(-3/4,-2/3,-1/2,0,1,2,3))
@@ -45,8 +43,7 @@ gp + scale_y_continuous(labels = percent)
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
 The `nfold_trans()` function ensures that negative percent changes scale
-in the same way as positive percent
-changes.
+in the same way as positive percent changes.
 
 ``` r
 gp + scale_y_continuous(labels = percent, trans = nfold_trans(), breaks = data$y)
@@ -65,20 +62,10 @@ gp + scale_y_nfold(labels = percent) +
 
 ## Installation
 
-To install the latest development version from
-[GitHub](https://github.com/poissonconsulting/poisplot)
+To install from GitHub
 
-    if(!"devtools" %in% installed.packages()[,1]) 
-      install.packages("devtools")
+    install.packages("devtools")
     devtools::install_github("poissonconsulting/poisplot")
-
-To install the latest development version from the Poisson drat
-[repository](https://github.com/poissonconsulting/drat)
-
-    if(!"drat" %in% installed.packages()[,1]) 
-      install.packages("drat")
-    drat::addRepo("poissonconsulting")
-    install.packages("poisplot")
 
 ## Contribution
 
