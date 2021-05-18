@@ -1,12 +1,9 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
 <!-- badges: start -->
 
-[![Travis-CI Build
-Status](https://travis-ci.org/poissonconsulting/poisplot.svg?branch=master)](https://travis-ci.org/poissonconsulting/poisplot)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/poisplot?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/poisplot)
+[![R build
+status](https://github.com/poissonconsulting/poisplot/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/poisplot/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/poissonconsulting/poisplot/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/poisplot?branch=master)
 [![License:
@@ -46,8 +43,7 @@ gp + scale_y_continuous(labels = percent)
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
 The `nfold_trans()` function ensures that negative percent changes scale
-in the same way as positive percent
-changes.
+in the same way as positive percent changes.
 
 ``` r
 gp + scale_y_continuous(labels = percent, trans = nfold_trans(), breaks = data$y)
@@ -66,20 +62,10 @@ gp + scale_y_nfold(labels = percent) +
 
 ## Installation
 
-To install the latest development version from
-[GitHub](https://github.com/poissonconsulting/poisplot)
+To install from GitHub
 
-    if(!"devtools" %in% installed.packages()[,1]) 
-      install.packages("devtools")
+    install.packages("devtools")
     devtools::install_github("poissonconsulting/poisplot")
-
-To install the latest development version from the Poisson drat
-[repository](https://github.com/poissonconsulting/drat)
-
-    if(!"drat" %in% installed.packages()[,1]) 
-      install.packages("drat")
-    drat::addRepo("poissonconsulting")
-    install.packages("poisplot")
 
 ## Contribution
 
@@ -89,6 +75,9 @@ Please report any
 [Pull requests](https://github.com/poissonconsulting/poisplot/pulls) are
 always welcome.
 
-Please note that the ‘poisplot’ project is released with a [Contributor
-Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
-you agree to abide by its terms.
+## Code of Conduct
+
+Please note that the poisplot project is released with a [Contributor
+Code of
+Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.
