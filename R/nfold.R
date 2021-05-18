@@ -10,7 +10,7 @@
 #' nfold2prop(prop2nfold(c(-1, -0.5, 0, 1, 2)))
 prop2nfold <- function(x) {
   x <- as.numeric(x)
-  check_vector(x, c(-1, Inf, NA_real_))
+  check_vector(x, c(0, NA_real_))
   if(!length(x)) return(x)
   ifelse(x >= 0, x, -(x+1)^-1+1)
 }
@@ -47,7 +47,7 @@ nfold_breaks <- function(n = 5) {
 nfold_trans <- function() {
   trans <- function(x) prop2nfold(x)
   inv <- function(x) nfold2prop(x)
-  trans_new("nfold", trans, inv, breaks = nfold_breaks(), domain = c(-1, Inf))
+  trans_new("nfold", trans, inv, breaks = nfold_breaks(), domain = c(-Inf, Inf))
 }
 
 #' N-fold Position Scales
