@@ -7,7 +7,7 @@
 #' @return invisible character vector of colors
 #' @export
 set_colors <- function(values = get_colors()) {
-  check_string(values)
+  chk_string(values)
   if (length(values) < 6)
     stop("there must be at least 6 color values")
 
