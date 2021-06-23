@@ -10,7 +10,8 @@
 #' nfold2prop(prop2nfold(c(-1, -0.5, 0, 1, 2)))
 prop2nfold <- function(x) {
   x <- as.numeric(x)
-  check_vector(x, c(0, NA_real_))
+  chk_vector(x)
+  check_values(x, c(0, NA_real_))
   if(!length(x)) return(x)
   ifelse(x >= 0, x, -(x+1)^-1+1)
 }
@@ -19,7 +20,8 @@ prop2nfold <- function(x) {
 #' @export
 nfold2prop <- function(x) {
   x <- as.numeric(x)
-  check_vector(x, c(0, NA_real_))
+  chk_vector(x)
+  check_values(x, c(0, NA_real_))
   if(!length(x)) return(x)
   ifelse(x >= 0, x, -(x-1)^-1-1)
 }
