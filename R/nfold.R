@@ -12,8 +12,10 @@ prop2nfold <- function(x) {
   x <- as.numeric(x)
   chk_vector(x)
   check_values(x, c(0, NA_real_))
-  if(!length(x)) return(x)
-  ifelse(x >= 0, x, -(x+1)^-1+1)
+  if (!length(x)) {
+    return(x)
+  }
+  ifelse(x >= 0, x, -(x + 1)^-1 + 1)
 }
 
 #' @describeIn prop2nfold N-fold Change to Proportional Change
@@ -22,8 +24,10 @@ nfold2prop <- function(x) {
   x <- as.numeric(x)
   chk_vector(x)
   check_values(x, c(0, NA_real_))
-  if(!length(x)) return(x)
-  ifelse(x >= 0, x, -(x-1)^-1-1)
+  if (!length(x)) {
+    return(x)
+  }
+  ifelse(x >= 0, x, -(x - 1)^-1 - 1)
 }
 
 #' N-fold Breaks
@@ -34,7 +38,7 @@ nfold2prop <- function(x) {
 #' @export
 #'
 #' @examples
-#' nfold_breaks()(c(-3/4,-2/3,-1/2,0,1,2,3))
+#' nfold_breaks()(c(-3 / 4, -2 / 3, -1 / 2, 0, 1, 2, 3))
 nfold_breaks <- function(n = 5) {
   force(n)
   function(x) {
@@ -54,7 +58,7 @@ nfold_trans <- function() {
 
 #' N-fold Position Scales
 #'
-#' scale_x_nfold() and scale_y_nfold() are variants of \code{\link{scale_x_continuous}()}
+#' scale_x_nfold() and scale_y_nfold() are variants of [scale_x_continuous()]
 #' that set the trans argument to transform proportional change to n-fold change.
 #' @inheritParams ggplot2::scale_x_continuous
 #'
