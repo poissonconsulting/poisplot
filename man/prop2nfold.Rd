@@ -20,9 +20,9 @@ Proportional Change to N-fold Change
 }
 \section{Functions}{
 \itemize{
-\item \code{nfold2prop}: N-fold Change to Proportional Change
-}}
+\item \code{nfold2prop()}: N-fold Change to Proportional Change
 
+}}
 \examples{
 prop2nfold(c(-1, -0.5, 0, 1, 2))
 nfold2prop(prop2nfold(c(-1, -0.5, 0, 1, 2)))
