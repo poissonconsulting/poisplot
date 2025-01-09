@@ -16,5 +16,5 @@ A function to calculate the breaks from a vector.
 N-fold Breaks
 }
 \examples{
-nfold_breaks()(c(-3/4,-2/3,-1/2,0,1,2,3))
+nfold_breaks()(c(-3 / 4, -2 / 3, -1 / 2, 0, 1, 2, 3))
 }
