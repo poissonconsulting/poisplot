@@ -20,7 +20,26 @@ test_that("nfold_trans", {
   expect_is(nfold_trans(), "transform")
 })
 
-test_that("scale_y/x_nfold", {
-  expect_equal(scale_y_nfold(), scale_y_continuous(trans = nfold_trans()))
-  expect_equal(scale_x_nfold(), scale_x_continuous(trans = nfold_trans()))
+test_that("scale_y_nfold", {
+  scale_n <- scale_y_nfold()
+  scale_cont <- scale_y_continuous(trans = nfold_trans())
+
+  scale_n$call <- NULL
+  scale_n$super <- NULL
+  scale_cont$call <- NULL
+  scale_cont$super <- NULL
+
+  expect_equal(scale_n, scale_cont)
+})
+
+test_that("scale_x_nfold", {
+  scale_n <- scale_x_nfold()
+  scale_cont <- scale_x_continuous(trans = nfold_trans())
+
+  scale_n$call <- NULL
+  scale_n$super <- NULL
+  scale_cont$call <- NULL
+  scale_cont$super <- NULL
+
+  expect_equal(scale_n, scale_cont)
 })
