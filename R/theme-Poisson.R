@@ -17,8 +17,8 @@ theme_Poisson <- function(base_size = 10, base_family = "") {
       legend.title      = element_text(size = rel(0.8)),
       panel.background  = element_rect(fill = "white", colour = NA),
       panel.border      = element_rect(fill = NA, colour = "black"),
-      panel.grid.major  = element_line(colour = "grey80", size = 0.5),
-      panel.grid.minor  = element_line(colour = "grey90", size = 0.2),
+      panel.grid.major  = element_line(colour = "grey80", linewidth = 0.5),
+      panel.grid.minor  = element_line(colour = "grey90", linewidth = 0.2),
       strip.background  = element_rect(fill = "grey80", colour = "black")
     )
 }
