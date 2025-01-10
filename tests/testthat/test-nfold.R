@@ -17,7 +17,7 @@ test_that("nfold_breaks", {
 })
 
 test_that("nfold_trans", {
-  expect_is(nfold_trans(), "transform")
+  expect_is(nfold_trans(), "trans")
 })
 
 test_that("scale_y/x_nfold", {
