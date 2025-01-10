@@ -3,7 +3,7 @@
 #' A gg theme for Poisson style plots.
 #'
 #' To use, ensure ggplot2 is installed and then call
-#' \code{theme_set(theme_Poisson())}.
+#' `theme_set(theme_Poisson())`.
 #'
 #' @param base_size an integer scalar indicating the base font size.
 #' @param base_family a character scalar indicating the base font family.

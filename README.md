@@ -1,13 +1,14 @@
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <!-- badges: start -->
 
+[![Lifecycle:
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![R build
 status](https://github.com/poissonconsulting/poisplot/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/poisplot/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/poissonconsulting/poisplot/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/poisplot?branch=master)
 [![License:
-MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/license/mit/)
 <!-- badges: end -->
 
 # poisplot
@@ -24,39 +25,33 @@ percent change (which is unlimited). This results in positive changes
 appearing much larger than equivalent negative changes in a standard
 plot.
 
-``` r
-library(poisplot)
-library(ggplot2)
-library(scales)
+    library(poisplot)
+    library(ggplot2)
+    library(scales)
 
-data <- data.frame(y = c(-3/4,-2/3,-1/2,0,1,2,3))
-data$x <- 1:nrow(data)
+    data <- data.frame(y = c(-3 / 4, -2 / 3, -1 / 2, 0, 1, 2, 3))
+    data$x <- 1:nrow(data)
 
-gp <- ggplot(data, aes(x = x, y = y)) +
-  geom_hline(yintercept = 0, linetype = "dotted") +
-  geom_line() +
-  geom_point()
+    gp <- ggplot(data, aes(x = x, y = y)) +
+      geom_hline(yintercept = 0, linetype = "dotted") +
+      geom_line() +
+      geom_point()
 
-gp + scale_y_continuous(labels = percent)
-```
+    gp + scale_y_continuous(labels = percent)
 
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
 The `nfold_trans()` function ensures that negative percent changes scale
 in the same way as positive percent changes.
 
-``` r
-gp + scale_y_continuous(labels = percent, trans = nfold_trans(), breaks = data$y)
-```
+    gp + scale_y_continuous(labels = percent, trans = nfold_trans(), breaks = data$y)
 
 <img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
 The poisplot also makes the Poisson plot theme available.
 
-``` r
-gp + scale_y_nfold(labels = percent) +
-  theme_Poisson()
-```
+    gp + scale_y_nfold(labels = percent) +
+      theme_Poisson()
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
 
