@@ -59,7 +59,8 @@ nfold_trans <- function() {
 #' N-fold Position Scales
 #'
 #' scale_x_nfold() and scale_y_nfold() are variants of [scale_x_continuous()]
-#' that set the trans argument to transform proportional change to n-fold change.
+#' that set the trans argument to transform proportional change to n-fold
+#' change.
 #' @inheritParams ggplot2::scale_x_continuous
 #'
 #' @export

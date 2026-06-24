@@ -14,5 +14,6 @@ scale_y_nfold(...)
 }
 \description{
 scale_x_nfold() and scale_y_nfold() are variants of \code{\link[ggplot2:scale_x_continuous]{scale_x_continuous()}}
-that set the trans argument to transform proportional change to n-fold change.
+that set the trans argument to transform proportional change to n-fold
+change.
 }
