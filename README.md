@@ -1,4 +1,6 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
 <!-- badges: start -->
 
 [![Lifecycle:
@@ -25,35 +27,41 @@ percent change (which is unlimited). This results in positive changes
 appearing much larger than equivalent negative changes in a standard
 plot.
 
-    library(poisplot)
-    library(ggplot2)
-    library(scales)
+``` r
+library(poisplot)
+library(ggplot2)
+library(scales)
 
-    data <- data.frame(y = c(-3 / 4, -2 / 3, -1 / 2, 0, 1, 2, 3))
-    data$x <- 1:nrow(data)
+data <- data.frame(y = c(-3 / 4, -2 / 3, -1 / 2, 0, 1, 2, 3))
+data$x <- 1:nrow(data)
 
-    gp <- ggplot(data, aes(x = x, y = y)) +
-      geom_hline(yintercept = 0, linetype = "dotted") +
-      geom_line() +
-      geom_point()
+gp <- ggplot(data, aes(x = x, y = y)) +
+  geom_hline(yintercept = 0, linetype = "dotted") +
+  geom_line() +
+  geom_point()
 
-    gp + scale_y_continuous(labels = percent)
+gp + scale_y_continuous(labels = percent)
+```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-2-1.png" alt="" width="100%" />
 
 The `nfold_trans()` function ensures that negative percent changes scale
 in the same way as positive percent changes.
 
-    gp + scale_y_continuous(labels = percent, trans = nfold_trans(), breaks = data$y)
+``` r
+gp + scale_y_continuous(labels = percent, trans = nfold_trans(), breaks = data$y)
+```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-3-1.png" alt="" width="100%" />
 
 The poisplot also makes the Poisson plot theme available.
 
-    gp + scale_y_nfold(labels = percent) +
-      theme_Poisson()
+``` r
+gp + scale_y_nfold(labels = percent) +
+  theme_Poisson()
+```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" alt="" width="100%" />
 
 ## Installation
 
