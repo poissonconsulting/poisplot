@@ -36,7 +36,7 @@ test_that("scale_x_nfold", {
   scale_n$call <- NULL
   scale_n$super <- NULL
 
-  scale_cont <- scale_x_continuous(trans = nfold_trans())
+  scale_cont <- scale_x_continuous(transform = nfold_trans())
   scale_cont$call <- NULL
   scale_cont$super <- NULL
 
@@ -48,7 +48,7 @@ test_that("scale_y_nfold", {
   scale_n$call <- NULL
   scale_n$super <- NULL
 
-  scale_cont <- scale_y_continuous(trans = nfold_trans())
+  scale_cont <- scale_y_continuous(transform = nfold_trans())
   scale_cont$call <- NULL
   scale_cont$super <- NULL
 

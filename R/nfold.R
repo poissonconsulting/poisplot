@@ -65,11 +65,11 @@ nfold_trans <- function() {
 #'
 #' @export
 scale_x_nfold <- function(...) {
-  scale_x_continuous(..., trans = nfold_trans())
+  scale_x_continuous(..., transform = nfold_trans())
 }
 
 #' @rdname scale_x_nfold
 #' @export
 scale_y_nfold <- function(...) {
-  scale_y_continuous(..., trans = nfold_trans())
+  scale_y_continuous(..., transform = nfold_trans())
 }
