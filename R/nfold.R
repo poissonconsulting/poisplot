@@ -53,7 +53,7 @@ nfold_breaks <- function(n = 5) {
 nfold_trans <- function() {
   trans <- function(x) prop2nfold(x)
   inv <- function(x) nfold2prop(x)
-  trans_new("nfold", trans, inv, breaks = nfold_breaks(), domain = c(-Inf, Inf))
+  trans_new("nfold", trans, inv, breaks = nfold_breaks(), domain = c(-1, Inf))
 }
 
 #' N-fold Position Scales

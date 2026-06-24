@@ -17,7 +17,18 @@ test_that("nfold_breaks", {
 })
 
 test_that("nfold_trans", {
-  expect_is(nfold_trans(), "transform")
+  expect_s3_class(nfold_trans(), "transform")
+  expect_equal(nfold_trans()$domain, c(-1, Inf))
+})
+
+test_that("scale_y_nfold snapshot", {
+  gp <- ggplot2::ggplot(
+    data.frame(x = 1:4, y = c(-0.5, 0, 0.5, 1)),
+    ggplot2::aes(x = x, y = y)
+  ) +
+    ggplot2::geom_point() +
+    scale_y_nfold()
+  expect_snapshot_plot(gp, "scale_y_nfold")
 })
 
 test_that("scale_x_nfold", {
