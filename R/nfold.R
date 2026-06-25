@@ -53,22 +53,23 @@ nfold_breaks <- function(n = 5) {
 nfold_trans <- function() {
   trans <- function(x) prop2nfold(x)
   inv <- function(x) nfold2prop(x)
-  trans_new("nfold", trans, inv, breaks = nfold_breaks(), domain = c(-Inf, Inf))
+  trans_new("nfold", trans, inv, breaks = nfold_breaks(), domain = c(-1, Inf))
 }
 
 #' N-fold Position Scales
 #'
 #' scale_x_nfold() and scale_y_nfold() are variants of [scale_x_continuous()]
-#' that set the trans argument to transform proportional change to n-fold change.
+#' that set the trans argument to transform proportional change to n-fold
+#' change.
 #' @inheritParams ggplot2::scale_x_continuous
 #'
 #' @export
 scale_x_nfold <- function(...) {
-  scale_x_continuous(..., trans = nfold_trans())
+  scale_x_continuous(..., transform = nfold_trans())
 }
 
 #' @rdname scale_x_nfold
 #' @export
 scale_y_nfold <- function(...) {
-  scale_y_continuous(..., trans = nfold_trans())
+  scale_y_continuous(..., transform = nfold_trans())
 }

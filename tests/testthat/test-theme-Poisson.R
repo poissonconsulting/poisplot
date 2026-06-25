@@ -1,3 +1,3 @@
 test_that("theme_Poisson", {
-  expect_is(theme_Poisson(), c("theme", "gg"))
+  expect_s3_class(theme_Poisson(), c("theme", "gg"))
 })
