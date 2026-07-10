@@ -10,7 +10,8 @@ test_that("nfold2prop", {
 })
 
 test_that("nfold_breaks", {
-  expect_equal(nfold_breaks()(c(-3 / 4, -2 / 3, -1 / 2, 0, 1, 2, 3)),
+  expect_equal(
+    nfold_breaks()(c(-3 / 4, -2 / 3, -1 / 2, 0, 1, 2, 3)),
     c(-0.75, -0.6666667, -0.5, 0, 1, 2, 3),
     tolerance = 1e-07
   )
