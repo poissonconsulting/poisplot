@@ -9,11 +9,11 @@
 ## Citation
 
 Thorley J (2026). *poisplot: Poisson Plots*. R package version
-0.0.0.9003.
+0.0.0.9004.
 
     @Manual{,
       title = {poisplot: Poisson Plots},
       author = {Joe Thorley},
       year = {2026},
-      note = {R package version 0.0.0.9003},
+      note = {R package version 0.0.0.9004},
     }
